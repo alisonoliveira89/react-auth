@@ -1,11 +1,14 @@
+import { Provider } from 'react-redux'
+import Login from './components/Login'
 import { GlobalCss } from './styles'
+import { store } from './store'
 
 function App() {
   return (
-    <div className="App">
+    <Provider store={store}>
       <GlobalCss />
-      <h1>Olá React</h1>
-    </div>
+      <Login />
+    </Provider>
   )
 }
 
